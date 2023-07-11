@@ -2,4 +2,9 @@ h1 {
     text-align: center;
     color: cornflowerblue;
   }
-  
+
+  img {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+  }
