@@ -1,4 +1,5 @@
 const React = require('react')
+const React = require('react')
 const Def = require('../default')
 
 function show (data) {
@@ -29,4 +30,3 @@ function show (data) {
 }
 
 module.exports = show
-

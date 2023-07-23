@@ -1,23 +1,25 @@
 const React = require('react')
 const Def = require('./default')
 
-function error404 () {
+function home () {
     return (
       <Def>
           <main>
-              <h1>404: PAGE NOT FOUND</h1>
-              <p>Oops, sorry, we can't find this page!</p>
+              <h1>HOME</h1>
           </main>
           <div>
-            <img src="images/Cliff.jpg" alt="Cliff" />
+            <img src="images/Horizon.jpg" alt="Horizon" />
             <div>
-                Photo by <a href="https://unsplash.com/pt-br/@kylejeffreys?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kyle Johnson</a> on <a href="https://unsplash.com/photos/TEZZzuQTt8g?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+              Photo by <a href="https://unsplash.com/@coopery?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mohamed Nohassi</a> on <a href="https://unsplash.com/photos/odxB5oIG_iA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
             </div>
           </div>
+          <a href="/places">
+              <button className="btn-primary">Places Page</button>
+          </a>
       </Def>
+      
     )
   }
   
 
-module.exports = error404
-
+module.exports = home
