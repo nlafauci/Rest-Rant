@@ -86,6 +86,7 @@ router.get('/:id/edit', (req, res) => {
 
 router.post('/:id/comment', (req, res) => {
   console.log(req.body)
+  req.body.rant = req.body.rant ? true : false
   db.Place.findById(req.params.id)
   .then(place => {
       db.Comment.create(req.body)
@@ -93,8 +94,14 @@ router.post('/:id/comment', (req, res) => {
           place.comments.push(comment.id)
           place.save()
           .then(() => {
+            console.log(["test"])
               res.redirect(`/places/${req.params.id}`)
           })
+          .catch(err => {
+            console.log(err)
+            res.render('error404')
+            })
+        
       })
       .catch(err => {
           res.render('error404')
