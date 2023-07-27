@@ -53,7 +53,7 @@ function show (data) {
             <h3> {data.place.showEstablished} </h3>
             <h4> Serving {data.place.cuisines} </h4>
         </main>
-        <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
+        <a href={`/places/${data.place._id}/edit`} className="btn btn-warning"> 
         Edit
         </a>      
         <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
